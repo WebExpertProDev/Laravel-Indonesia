@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>User Statistics</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <!-- <link href="assets/img/favicon.png" rel="icon"> -->
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://rawgit.com/gionkunz/chartist-js/master/dist/chartist.min.css">
+<script src="https://rawgit.com/gionkunz/chartist-js/master/dist/chartist.min.js"></script>
+<style>
+  input.form-control {
+    border: 1px solid gainsboro;
+}
+.red {
+    color: red;
+}
+.user {
+    overflow: hidden;
+    padding: 10px 0px 10px 25px;
+    background: #f2f2f2;
+}
+</style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h5 class="logo mr-auto"><a href="index.html">OYIKA Cambodia</a></h5>
+      <!--  <a href="index.html" class="logo mr-auto"><img src="images/logo.png" alt="" class="img-fluid"></a> -->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+         <li class="drop-down"><a href="index.html"><i class="fa fa-cogs pr-2" aria-hidden="true"></i>Security</a>
+            <ul>
+              <li><a href="#"><i class="fa fa-user pr-2" aria-hidden="true"></i>List Users</a></li>
+              <li><a href="#"><i class="fa fa-users pr-2" aria-hidden="true"></i>List Roles</a></li>
+              <li><a href="#"><i class="fa fa-bar-chart pr-2" aria-hidden="true"></i>User's Statistics</a></li>
+              <li><a href="#"><i class="fa fa-lock pr-2" aria-hidden="true"></i>Base Permissions</a></li>
+              <li><a href="#"><i class="fa fa-list-alt pr-2" aria-hidden="true"></i>Views/Menus</a></li>
+              <li><a href="#"><i class="fa fa-link pr-2" aria-hidden="true"></i>Permission on View/Menu</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="index.html"><i class="fa fa-list pr-2" aria-hidden="true"></i>Checklist</a>
+            <ul>
+               <li><a href="#"><i class="fa fa-users pr-2" aria-hidden="true"></i>Form</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="index.html"></i>Analytics</a>
+            <ul>
+              <li><a href="#"><i class="fa fa-folder-open-o pr-2" aria-hidden="true"></i>Ops Reports View</a></li>
+            </ul>
+          </li>
+     
+          <li class="drop-down"><a href="index.html"><i class="fa fa-flag" aria-hidden="true"></i></a>
+            <ul>
+              <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-flag" aria-hidden="true"></i></a></li>
+              <li><a href="#"> <i class="fa fa-flag" aria-hidden="true"></i></a></li>
+              <li><a href="#"> <i class="fa fa-flag" aria-hidden="true"></i></a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="index.html"><i class="fa fa-user pr-2" aria-hidden="true"></i>admin user</a>
+            <ul>
+              <li><a href="#">Website Acceleration</a></li>
+              <li><a href="#">Image Processing</a></li>
+              <li><a href="#">Video & Streaming</a></li>
+              <li><a href="#">Cloud Storage</a></li>
+            </ul>
+          </li>
+          </ul>
+      </nav><!-- .nav-menu -->
+  
+    </div>
+  </header><!-- End Header -->
+
+
+<div class="main mt-5 pt-5">
+  <div class="container">
+    <h5 class="form-heading mb-0">User Statistics</h5>
+    <div class="chectlist">
+      <div class="user">
+      <div class="row">
+        <p>Group by:</p>
+        <div class="pl-2"><button type="button" class="btn btn-primary">Login Count</button></div>
+        <div class="pl-2"><button type="button" class="btn btn-primary">Failed Login Count</button></div>
+      </div>
+    </div>
+   
+
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row">
+            <div class="container-fluid d-flex pt-3">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">User Statistics</div>
+                        <div class="card-body" style="height: 420px">
+                            <div class="chartjs-size-monitor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;">
+                                <div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                    <div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div>
+                                </div>
+                                <div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;">
+                                    <div style="position:absolute;width:200%;height:200%;left:0; top:0"></div>
+                                </div>
+                            </div>
+                            <div class=" ct-chart ct-square chartjs-render-monitor" style="display: block; width: 550px; height: 400px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ </div>
+</div>
+</div>
+<!-- main_end -->
+
+
+  <!-- ======= Footer ======= -->
+
+
+
+        
+<!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+<script>
+    $(document).ready(function() {
+        data = {
+            'labels': [01, 02, 03, 04],
+            'series': [
+                [0, 2, 5, 6]
+            ]
+        };
+        new Chartist.Line('.ct-chart', data, {
+            showPoint: true,
+        });
+    });
+</script>
+
+</body>
+
+</html>
